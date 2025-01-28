@@ -23,7 +23,6 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>Preço</th>
                 <th>Descrição</th>
@@ -32,7 +31,6 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
             <?php foreach ($products as $product): ?>
                 <tr>
-                    <td><?= htmlspecialchars($product['id_produto']) ?></td>
                     <td><?= htmlspecialchars($product['nome_produto']) ?></td>
                     <td><?= htmlspecialchars($product['preco_produto']) ?></td>
                     <td><?= htmlspecialchars($product['desc_produto']) ?></td>
