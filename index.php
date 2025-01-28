@@ -33,10 +33,9 @@
                     $usuario = $result->fetch_assoc();
 
                     if (password_verify($senha, $usuario['senha'])){
-                        $_SESSION['nome'] = $usuario['nome'];
-                        $_SESSION['email'] = $usuario['email'];
+                        $_SESSION['usuario'] = $usuario;
 
-                        header('Location:dashboard.php');
+                        header('Location: dashboard.php');
                     } else {
                         echo "<p style='color:red;'>Senha incorreta</p>";
                     }
